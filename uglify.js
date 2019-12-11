@@ -40,7 +40,7 @@ files.css.forEach((file) => {
         if (filepath.indexOf('http') === -1 && filepath.indexOf('data:') === -1) {
             filepath = path.resolve(path.dirname(file), filepath);
 
-            return '/alden_s/' + filepath
+            return filepath
                 .replace(rootPath, '')
                 .split(path.sep).join('/');
         }
